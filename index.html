@@ -3,27 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Wave 2025 - Speaker Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>AI WAVE 2025 - საქართველოს უდიდესი AI კონფერენცია</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Primary Colors */
-            --electric-cyan: #0FF0FC;
-            --deep-dark-navy: #0A0F2C;
-            --neon-blue: #1FC7FF;
-            
-            /* Secondary Colors */
+            --electric-cyan: #00FFFF;
+            --neon-blue: #0080FF;
+            --deep-navy: #0A0F2C;
+            --gold: #FFD700;
             --white: #FFFFFF;
-            --light-gray: #F5F7FA;
-            
-            /* Accent Colors */
-            --cobalt: #3B82F6;
-            --purple-gradient-start: #6D28D9;
-            --purple-gradient-end: #3B82F6;
-            
-            /* Additional grays for better contrast */
-            --medium-gray: #6B7280;
-            --text-gray: #374151;
+            --premium-gradient: linear-gradient(135deg, #00FFFF, #0080FF, #4169E1);
+            --hero-gradient: linear-gradient(135deg, #0A0F2C 0%, #1a1f3a 50%, #0A0F2C 100%);
         }
 
         * {
@@ -33,1143 +24,611 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--deep-dark-navy);
-            background: var(--deep-dark-navy);
-            min-height: 100vh;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* AI Background Animation */
-        .ai-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .ai-icon {
-            position: absolute;
-            opacity: 0.18;
-            font-size: 2.2rem;
-            color: var(--neon-blue);
-            animation: float 25s infinite linear;
-            text-shadow: 0 0 15px rgba(31, 199, 255, 0.4);
-        }
-
-        .ai-logo {
-            position: absolute;
-            opacity: 0.15;
-            font-size: 1.9rem;
-            color: var(--electric-cyan);
-            animation: floatLogo 30s infinite linear;
-            font-weight: 700;
-            text-shadow: 0 0 20px rgba(15, 240, 252, 0.5);
-            background: rgba(15, 240, 252, 0.08);
-            padding: 4px 8px;
-            border-radius: 6px;
-            border: 1px solid rgba(15, 240, 252, 0.2);
-        }
-
-        .tech-symbol {
-            position: absolute;
-            opacity: 0.12;
-            font-size: 1.8rem;
-            color: var(--electric-cyan);
-            animation: techFloat 35s infinite linear;
-            text-shadow: 0 0 12px rgba(15, 240, 252, 0.6);
-            font-weight: 600;
-        }
-
-        .brain-emoji {
-            position: absolute;
-            opacity: 0.2;
-            font-size: 3rem;
-            animation: brainPulse 8s infinite ease-in-out;
-            filter: drop-shadow(0 0 15px rgba(15, 240, 252, 0.4));
-        }
-
-        /* Different animation patterns */
-        .ai-icon:nth-child(1) { left: 5%; animation-delay: 0s; }
-        .ai-icon:nth-child(2) { left: 15%; animation-delay: -3s; }
-        .ai-icon:nth-child(3) { left: 25%; animation-delay: -6s; }
-        .ai-icon:nth-child(4) { left: 35%; animation-delay: -9s; }
-        .ai-icon:nth-child(5) { left: 45%; animation-delay: -12s; }
-        .ai-icon:nth-child(6) { left: 55%; animation-delay: -15s; }
-        .ai-icon:nth-child(7) { left: 65%; animation-delay: -18s; }
-        .ai-icon:nth-child(8) { left: 75%; animation-delay: -21s; }
-        .ai-icon:nth-child(9) { left: 85%; animation-delay: -24s; }
-        .ai-icon:nth-child(10) { left: 95%; animation-delay: -27s; }
-
-        .ai-logo:nth-child(11) { left: 8%; animation-delay: -5s; }
-        .ai-logo:nth-child(12) { left: 18%; animation-delay: -10s; }
-        .ai-logo:nth-child(13) { left: 28%; animation-delay: -15s; }
-        .ai-logo:nth-child(14) { left: 38%; animation-delay: -20s; }
-        .ai-logo:nth-child(15) { left: 48%; animation-delay: -25s; }
-        .ai-logo:nth-child(16) { left: 58%; animation-delay: -30s; }
-        .ai-logo:nth-child(17) { left: 68%; animation-delay: -35s; }
-        .ai-logo:nth-child(18) { left: 78%; animation-delay: -40s; }
-        .ai-logo:nth-child(19) { left: 88%; animation-delay: -45s; }
-        .ai-logo:nth-child(20) { left: 98%; animation-delay: -50s; }
-
-        .tech-symbol:nth-child(21) { left: 12%; animation-delay: -8s; }
-        .tech-symbol:nth-child(22) { left: 22%; animation-delay: -16s; }
-        .tech-symbol:nth-child(23) { left: 32%; animation-delay: -24s; }
-        .tech-symbol:nth-child(24) { left: 42%; animation-delay: -32s; }
-        .tech-symbol:nth-child(25) { left: 52%; animation-delay: -40s; }
-        .tech-symbol:nth-child(26) { left: 62%; animation-delay: -48s; }
-        .tech-symbol:nth-child(27) { left: 72%; animation-delay: -56s; }
-        .tech-symbol:nth-child(28) { left: 82%; animation-delay: -64s; }
-        .tech-symbol:nth-child(29) { left: 92%; animation-delay: -72s; }
-
-        .brain-emoji:nth-child(30) { left: 20%; top: 20%; animation-delay: 0s; }
-        .brain-emoji:nth-child(31) { left: 60%; top: 60%; animation-delay: -2s; }
-        .brain-emoji:nth-child(32) { left: 80%; top: 30%; animation-delay: -4s; }
-        .brain-emoji:nth-child(33) { left: 30%; top: 70%; animation-delay: -6s; }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.18;
-            }
-            90% {
-                opacity: 0.18;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes floatLogo {
-            0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.8);
-                opacity: 0;
-            }
-            15% {
-                opacity: 0.15;
-            }
-            85% {
-                opacity: 0.15;
-            }
-            100% {
-                transform: translateY(-100px) rotate(-360deg) scale(1.2);
-                opacity: 0;
-            }
-        }
-
-        @keyframes techFloat {
-            0% {
-                transform: translateY(100vh) rotateX(0deg);
-                opacity: 0;
-            }
-            20% {
-                opacity: 0.12;
-            }
-            80% {
-                opacity: 0.12;
-            }
-            100% {
-                transform: translateY(-100px) rotateX(720deg);
-                opacity: 0;
-            }
-        }
-
-        @keyframes brainPulse {
-            0%, 100% {
-                transform: scale(1) rotate(0deg);
-                opacity: 0.2;
-                filter: hue-rotate(0deg) drop-shadow(0 0 15px rgba(15, 240, 252, 0.4));
-            }
-            25% {
-                transform: scale(1.3) rotate(90deg);
-                opacity: 0.3;
-                filter: hue-rotate(90deg) drop-shadow(0 0 25px rgba(31, 199, 255, 0.6));
-            }
-            50% {
-                transform: scale(0.9) rotate(180deg);
-                opacity: 0.15;
-                filter: hue-rotate(180deg) drop-shadow(0 0 20px rgba(15, 240, 252, 0.5));
-            }
-            75% {
-                transform: scale(1.2) rotate(270deg);
-                opacity: 0.25;
-                filter: hue-rotate(270deg) drop-shadow(0 0 30px rgba(31, 199, 255, 0.7));
-            }
-        }
-
-        /* Neural Network Background */
-        .neural-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -2;
-        }
-
-        .node {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--electric-cyan);
-            border-radius: 50%;
-            animation: pulse 4s infinite ease-in-out;
-            box-shadow: 0 0 8px rgba(15, 240, 252, 0.6);
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 0.3; 
-                transform: scale(1);
-                box-shadow: 0 0 8px rgba(15, 240, 252, 0.6);
-            }
-            50% { 
-                opacity: 0.8; 
-                transform: scale(2);
-                box-shadow: 0 0 20px rgba(15, 240, 252, 0.9);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header {
-            text-align: center;
-            background: var(--white);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(15, 240, 252, 0.1);
-            border: 1px solid rgba(31, 199, 255, 0.2);
-        }
-
-        .logo {
-            font-size: 3.8em;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
             font-family: 'Inter', sans-serif;
-        }
-
-        .subtitle {
-            font-size: 1.4em;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-
-        .event-details {
-            background: linear-gradient(135deg, var(--purple-gradient-start), var(--purple-gradient-end));
+            background: var(--deep-navy);
             color: var(--white);
-            padding: 30px 35px;
-            border-radius: 16px;
-            margin: 25px 0;
-            box-shadow: 0 15px 40px rgba(109, 40, 217, 0.3);
-            font-size: 1.1em;
-            line-height: 1.7;
-            border: 1px solid rgba(31, 199, 255, 0.2);
+            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        .event-details div {
-            margin: 10px 0;
+        /* Hero Section with Massive Impact */
+        .hero {
+            height: 100vh;
+            background: var(--hero-gradient);
+            position: relative;
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .event-details strong {
-            color: var(--electric-cyan);
-        }
-
-        .main-content {
-            background: var(--white);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 50px 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(15, 240, 252, 0.08);
-            border: 1px solid rgba(31, 199, 255, 0.15);
-        }
-
-        .description {
-            font-size: 1.15em;
-            line-height: 1.8;
-            color: var(--text-gray);
-            margin-bottom: 35px;
+            justify-content: center;
             text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .format-section {
-            background: linear-gradient(135deg, var(--deep-dark-navy), #1a202c);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            margin: 35px 0;
-            box-shadow: 0 15px 40px rgba(10, 15, 44, 0.4);
-            border: 1px solid var(--neon-blue);
-            position: relative;
             overflow: hidden;
         }
 
-        .format-section::before {
+        /* Animated Background */
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--electric-cyan), var(--neon-blue), var(--electric-cyan));
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 128, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            animation: backgroundPulse 8s ease-in-out infinite alternate;
         }
 
-        .format-section h3 {
-            font-size: 1.9em;
-            margin-bottom: 25px;
-            color: var(--electric-cyan);
+        @keyframes backgroundPulse {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* Neural Network Animation */
+        .neural-network {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .neural-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--electric-cyan);
+            border-radius: 50%;
+            animation: neuralPulse 3s ease-in-out infinite;
+        }
+
+        .neural-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--electric-cyan), transparent);
+            animation: neuralFlow 4s linear infinite;
+        }
+
+        @keyframes neuralPulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        @keyframes neuralFlow {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Hero Content */
+        .hero-content {
+            z-index: 10;
+            position: relative;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .conference-badge {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--premium-gradient);
+            border-radius: 50px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite alternate;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
+            100% { box-shadow: 0 0 50px rgba(0, 255, 255, 0.8), 0 0 80px rgba(0, 128, 255, 0.3); }
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 8vw, 8rem);
+            font-weight: 900;
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+            animation: titlePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .hero-description {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Event Stats */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            animation: statFloat 6s ease-in-out infinite;
+        }
+
+        .stat-item:nth-child(2) { animation-delay: -2s; }
+        .stat-item:nth-child(3) { animation-delay: -4s; }
+
+        @keyframes statFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Event Details */
+        .event-details {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            flex-wrap: wrap;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
             font-weight: 600;
         }
 
-        .format-section p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 18px;
-            opacity: 0.95;
+        .detail-icon {
+            font-size: 1.5rem;
+            color: var(--electric-cyan);
         }
 
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 35px 0;
+        /* CTA Buttons */
+        .cta-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
         }
 
-        .topic-item {
-            background: var(--light-gray);
-            padding: 30px;
-            border-radius: 16px;
-            border: 2px solid rgba(31, 199, 255, 0.15);
-            font-size: 1.1em;
-            font-weight: 500;
-            color: var(--text-gray);
-            transition: all 0.4s ease;
+        .cta-button {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
         }
 
-        .topic-item::before {
+        .cta-primary {
+            background: var(--premium-gradient);
+            color: var(--deep-navy);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.4);
+        }
+
+        .cta-secondary:hover {
+            background: var(--gold);
+            color: var(--deep-navy);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Announcement Banner */
+        .announcement {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--premium-gradient);
+            color: var(--deep-navy);
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        .section-description {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(31, 199, 255, 0.1), transparent);
-            transition: left 0.6s ease;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
         }
 
-        .topic-item:hover {
-            background: var(--white);
-            transform: translateY(-8px);
-            border-color: var(--neon-blue);
-            box-shadow: 0 20px 40px rgba(31, 199, 255, 0.2);
-            color: var(--deep-dark-navy);
-        }
-
-        .topic-item:hover::before {
+        .feature-card:hover::before {
             left: 100%;
         }
 
-        .speaker-section, .requirements-section, .location-section {
-            margin: 45px 0;
-        }
-
-        .speaker-section h3, .requirements-section h3, .location-section h3 {
-            font-size: 1.9em;
-            background: linear-gradient(135deg, var(--neon-blue), var(--electric-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-        }
-
-        .requirements-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .requirements-list li {
-            background: var(--light-gray);
-            padding: 25px 30px;
-            margin: 20px 0;
-            border-radius: 16px;
-            border-left: 4px solid var(--cobalt);
-            font-size: 1.1em;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            transition: all 0.3s ease;
-            color: var(--text-gray);
-        }
-
-        .requirements-list li:hover {
-            background: var(--white);
-            transform: translateX(8px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
-            border-left-color: var(--electric-cyan);
-        }
-
-        .location-info {
-            background: var(--light-gray);
-            padding: 35px;
-            border-radius: 16px;
-            border: 2px solid rgba(31, 199, 255, 0.2);
-            margin: 25px 0;
-            transition: all 0.3s ease;
-        }
-
-        .location-info:hover {
-            background: var(--white);
-            border-color: var(--neon-blue);
-            box-shadow: 0 15px 40px rgba(31, 199, 255, 0.1);
-        }
-
-        .closing-section {
-            background: linear-gradient(135deg, var(--deep-dark-navy), #1a202c);
-            color: var(--white);
-            padding: 60px 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 50px;
-            box-shadow: 0 25px 80px rgba(10, 15, 44, 0.5);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--electric-cyan);
-        }
-
-        .closing-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(15, 240, 252, 0.1) 0%, transparent 70%);
-            animation: rotate 25s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .closing-section h2 {
-            font-size: 2.8em;
-            margin-bottom: 30px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-            background: linear-gradient(135deg, var(--electric-cyan), var(--white));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .closing-text {
-            font-size: 1.25em;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            opacity: 0.95;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: rgba(31, 199, 255, 0.7);
-            font-size: 1.1em;
-            margin-top: 30px;
-        }
-
-        /* Enhanced Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                margin: 0 10px;
-            }
-            
-            .header, .main-content {
-                padding: 40px 25px;
-                border-radius: 16px;
-                margin-bottom: 30px;
-            }
-            
-            .logo {
-                font-size: 2.8em;
-                line-height: 1.1;
-            }
-            
-            .subtitle {
-                font-size: 1.2em;
-            }
-            
-            .event-details {
-                padding: 25px 20px;
-                margin: 20px 0;
-            }
-            
-            .event-details div {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-                margin: 15px 0;
-            }
-            
-            .format-section {
-                padding: 30px 25px;
-                margin: 25px 0;
-            }
-            
-            .format-section h3 {
-                font-size: 1.6em;
-            }
-            
-            .topics-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                margin: 25px 0;
-            }
-            
-            .topic-item {
-                padding: 25px 20px;
-            }
-            
-            .speaker-section h3, .requirements-section h3, .location-section h3 {
-                font-size: 1.6em;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-            
-            .requirements-list li {
-                padding: 20px;
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .location-info {
-                padding: 25px 20px;
-            }
-            
-            .closing-section {
-                padding: 50px 25px;
-                margin-top: 40px;
-            }
-            
-            .closing-section h2 {
-                font-size: 2.2em;
-                line-height: 1.2;
-            }
-            
-            .closing-text {
-                font-size: 1.1em;
-            }
-
-            .ai-icon {
-                font-size: 1.5rem;
-            }
-            
-            .ai-logo {
-                font-size: 1.2rem;
-            }
-            
-            .tech-symbol {
-                font-size: 1rem;
-            }
-            
-            .brain-emoji {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 10px;
-                margin: 0 5px;
-            }
-            
-            .header, .main-content {
-                padding: 30px 20px;
-            }
-            
-            .logo {
-                font-size: 2.4em;
-            }
-            
-            .event-details {
-                padding: 20px 15px;
-            }
-            
-            .format-section {
-                padding: 25px 20px;
-            }
-            
-            .topic-item {
-                padding: 20px 15px;
-            }
-            
-            .requirements-list li {
-                padding: 15px;
-            }
-            
-            .location-info {
-                padding: 20px 15px;
-            }
-            
-            .closing-section {
-                padding: 40px 20px;
-            }
-            
-            .closing-section h2 {
-                font-size: 2em;
-            }
-        }
-
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            .topic-item {
-                border-width: 3px;
-            }
-            
-            .requirements-list li {
-                border-left-width: 6px;
-            }
-        }
-
-        /* Registration Form Styles */
-        .registration-form {
-            margin-top: 30px;
-            padding: 30px;
-            background: var(--white);
-            border-radius: 16px;
-            border: 2px solid rgba(31, 199, 255, 0.2);
-            box-shadow: 0 15px 40px rgba(15, 240, 252, 0.1);
-        }
-
-        .form-container h3 {
-            color: var(--deep-dark-navy);
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            background: linear-gradient(135deg, var(--neon-blue), var(--electric-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .form-container > p {
-            color: var(--text-gray);
-            margin-bottom: 25px;
-            font-size: 1.1em;
-        }
-
-        /* Participation Button and Form Styles */
-        .participation-button-container {
-            text-align: center;
-            margin: 40px 0 20px 0;
-        }
-
-        .participation-btn {
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-blue));
-            color: var(--deep-dark-navy);
-            border: none;
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(15, 240, 252, 0.3);
-            text-transform: none;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .participation-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(15, 240, 252, 0.5);
-            background: linear-gradient(135deg, var(--neon-blue), var(--electric-cyan));
-        }
-
-        .participation-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Modal Styles */
-        .form-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(10, 15, 44, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .form-modal-content {
-            background: var(--white);
-            margin: 5% auto;
-            padding: 40px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 600px;
-            position: relative;
-            box-shadow: 0 25px 80px rgba(15, 240, 252, 0.2);
-            border: 1px solid rgba(31, 199, 255, 0.3);
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .close-modal {
-            color: var(--medium-gray);
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        .close-modal:hover {
-            color: var(--electric-cyan);
-        }
-
-        .form-modal-content h3 {
-            color: var(--deep-dark-navy);
-            margin-bottom: 10px;
-            font-size: 1.8em;
-            background: linear-gradient(135deg, var(--neon-blue), var(--electric-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .form-modal-content > p {
-            color: var(--text-gray);
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-gray);
-            font-weight: 600;
-            font-size: 1.05em;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid rgba(31, 199, 255, 0.2);
-            border-radius: 12px;
-            font-size: 1em;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.3s ease;
-            background: var(--light-gray);
-            color: var(--text-gray);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
+        .feature-card:hover {
+            transform: translateY(-10px);
             border-color: var(--electric-cyan);
-            background: var(--white);
-            box-shadow: 0 0 0 3px rgba(15, 240, 252, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
         }
 
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--electric-cyan);
+            margin-bottom: 20px;
+            display: block;
         }
 
-        .form-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: flex-end;
-            margin-top: 30px;
-        }
-
-        .btn-cancel {
-            background: var(--light-gray);
-            color: var(--text-gray);
-            border: 2px solid rgba(31, 199, 255, 0.2);
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-cancel:hover {
-            background: var(--white);
-            border-color: var(--neon-blue);
-        }
-
-        .btn-submit {
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-blue));
-            color: var(--deep-dark-navy);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1em;
+        .feature-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(15, 240, 252, 0.3);
-            font-family: 'Inter', sans-serif;
+            color: var(--white);
+            margin-bottom: 15px;
         }
 
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(15, 240, 252, 0.4);
+        .feature-description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
         }
 
-        /* Mobile responsiveness for form */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .form-modal-content {
-                margin: 10% auto;
-                padding: 30px 20px;
-                width: 95%;
+            .stats-container {
+                gap: 30px;
             }
             
-            .participation-btn {
-                padding: 15px 30px;
-                font-size: 1.1em;
+            .stat-item {
+                min-width: 150px;
+                padding: 20px;
             }
             
-            .form-buttons {
+            .cta-container {
                 flex-direction: column;
+                align-items: center;
             }
             
-            .btn-cancel,
-            .btn-submit {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            .ai-icon,
-            .node,
-            .closing-section::before {
-                animation: none;
+            .detail-row {
+                flex-direction: column;
+                gap: 15px;
             }
             
-            .topic-item::before {
-                transition: none;
+            .hero {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- AI Background Animation -->
-    <div class="ai-background">
-        <!-- AI Icons -->
-        <div class="ai-icon">🤖</div>
-        <div class="ai-icon">⚡</div>
-        <div class="ai-icon">💡</div>
-        <div class="ai-icon">⚙️</div>
-        <div class="ai-icon">🔬</div>
-        <div class="ai-icon">📊</div>
-        <div class="ai-icon">🔍</div>
-        <div class="ai-icon">💻</div>
-        <div class="ai-icon">🌐</div>
-        <div class="ai-icon">🔮</div>
-        
-        <!-- AI Company Logos -->
-        <div class="ai-logo">ChatGPT</div>
-        <div class="ai-logo">Claude</div>
-        <div class="ai-logo">Gemini</div>
-        <div class="ai-logo">GPT-4</div>
-        <div class="ai-logo">Midjourney</div>
-        <div class="ai-logo">DALL-E</div>
-        <div class="ai-logo">Copilot</div>
-        <div class="ai-logo">Perplexity</div>
-        <div class="ai-logo">Anthropic</div>
-        <div class="ai-logo">OpenAI</div>
-        
-        <!-- Technical Symbols -->
-        <div class="tech-symbol">{ }</div>
-        <div class="tech-symbol">< / ></div>
-        <div class="tech-symbol">∞</div>
-        <div class="tech-symbol">∑</div>
-        <div class="tech-symbol">∆</div>
-        <div class="tech-symbol">λ</div>
-        <div class="tech-symbol">π</div>
-        <div class="tech-symbol">∅</div>
-        <div class="tech-symbol">∇</div>
-        
-        <!-- Brain Emojis -->
-        <div class="brain-emoji">🧠</div>
-        <div class="brain-emoji">🧠</div>
-        <div class="brain-emoji">🧠</div>
-        <div class="brain-emoji">🧠</div>
+    <!-- Announcement Banner -->
+    <div class="announcement">
+        🎟️ ბილეთების გაყიდვა მალე დაიწყება! • 📍 თბილისი, ბეთლემის ქუჩა N10 • 🗓️ 27 სექტემბერი, 2025
     </div>
 
-    <!-- Neural Network Background -->
-    <div class="neural-bg" id="neural-bg"></div>
-
-    <div class="container">
-        <div class="header">
-            <h1 class="logo">🌊 AI Wave 2025</h1>
-            <p class="subtitle">სპეციალური მოწვევა სპიკერებისთვის</p>
-            
-            <div class="event-details">
-                <div>🗓 <strong>თარიღი:</strong> 27 სექტემბერი, 2025</div>
-                <div>⏰ <strong>დრო:</strong> 12:00 - 19:00</div>
-                <div>📍 <strong>ადგილი:</strong> თბილისი, ბეთლემის ქუჩა N10</div>
-                <div>⏱ <strong>ფორმატი:</strong> მოკლე გამოსვლები | 12–15 წუთი თითო სპიკერზე</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Neural Network Animation -->
+        <div class="neural-network" id="neural-network"></div>
+        
+        <div class="hero-content">
+            <div class="conference-badge">
+                საქართველოს უდიდესი AI კონფერენცია
             </div>
             
-            <!-- Top Registration Button -->
-            <div class="participation-button-container">
-                <button class="participation-btn" onclick="scrollToForm()">
-                    🎯 მონაწილეობის მიღება
-                </button>
-            </div>
-        </div>
-
-        <div class="main-content">
-            <div class="description">
-                <p>დაგეგმილია ერთდღიანი ღონისძიება, სადაც სხვადასხვა სფეროს პროფესიონალები, ხელოვნური ინტელექტის სპეციალისტები და ისინიც, ვინც ამ ტექნოლოგიასთან ახლახან დაიწყო ურთიერთობა, გააზიარებენ საკუთარ ხედვას AI-ის შესახებ.</p>
-                <p>ღონისძიების მიზანია შევქმნათ ინსპირაციული სივრცე, სადაც ადამიანები ისაუბრებენ იმაზე, როგორ აღიქვამენ და იყენებენ ხელოვნურ ინტელექტს თავიანთ სფეროში, საქმიანობაში ან პირად ცხოვრებაში.</p>
-            </div>
-
-            <div class="format-section">
-                <h3>📌 როგორია ღონისძიების ფორმატი?</h3>
-                <p>ღონისძიება დაიწყება შუადღეს, 12:00 საათზე და გაგრძელდება დაახლოებით საღამოს 19:00 საათამდე.</p>
-                <p>ამ დროის განმავლობაში, მოწვეული სპიკერები წარადგენენ თავიანთ გამოსვლებს ხელოვნური ინტელექტის თემაზე.</p>
-                <p>ღონისძიება ტარდება მოკლე გამოსვლების სერიად, სტრუქტურით მსგავსი „Spotlight"-ის ფორმატისა.</p>
-                <p>ეს ნიშნავს, რომ თითოეულ მოწვეულ სპიკერს ექნება 12–15 წუთი, ისაუბროს ხელოვნური ინტელექტის მისთვის მნიშვნელოვან კუთხეზე.</p>
-                
-                <div style="margin: 25px 0; padding: 20px; background: rgba(15, 240, 252, 0.1); border-left: 4px solid #0FF0FC; border-radius: 8px;">
-                    <h4 style="color: #0FF0FC; margin-bottom: 15px;">🧃 შესვენებები და დამატებითი აქტივობები</h4>
-                    <p>დღის განმავლობაში დაგეგმილია 1–2 შესვენება, სადაც მონაწილეებს საშუალება ექნებათ განიტვირთონ, დალიონ ყავა, გააგრძელონ ერთმანეთთან საუბარი ან უბრალოდ დაისვენონ.</p>
-                    <p style="margin-top: 10px;">🌿 შესვენებები გაიმართება ეზოში, სადაც დაგხვდებათ დამატებითი აქტივობები, ჰაეროვანი სივრცე და მსუბუქი გასართობი ელემენტები — ყველაფერი იმისთვის, რომ გარემო იყოს არა მხოლოდ პროფესიული, არამედ მეგობრული და კომფორტული.</p>
-                </div>
-                
-                <div style="margin: 25px 0; padding: 20px; background: rgba(31, 199, 255, 0.1); border-left: 4px solid #1FC7FF; border-radius: 8px;">
-                    <h4 style="color: #1FC7FF; margin-bottom: 15px;">🎉 After Party</h4>
-                    <p>როდესაც ღონისძიება დასრულდება 19:00 საათზე, საღამო გაგრძელდება ღია, მეგობრული ფორმატის After Party-თი.</p>
-                    <p style="margin-top: 10px;">ეს იქნება სივრცე, სადაც სტუმრებს, სპიკერებს და აუდიტორიას საშუალება ექნებათ თავისუფლად გააგრძელონ ერთმანეთთან საუბარი, გაუზიარონ ერთმანეთს შთაბეჭდილებები და უბრალოდ ისიამოვნონ გარემოთი.</p>
-                </div>
-                
-                <div style="margin: 25px 0; padding: 20px; background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3B82F6; border-radius: 8px;">
-                    <h4 style="color: #3B82F6; margin-bottom: 15px;">🏢 ტექნიკური რესურსები და გარემო</h4>
-                    <p>ადგილზე იქნება ყველა საჭირო ტექნიკური რესურსი და სტუმართმოყვარე გარემოს.</p>
-                </div>
-                
-                <p style="margin-top: 25px;"><strong style="color: #0FF0FC;">✅ თემა თავისუფალია.</strong></p>
-                <p>არ არის აუცილებელი, რომ ტექნიკური იყოს — პირიქით, ჩვენ გვაინტერესებს სხვადასხვა მიმართულება:</p>
-            </div>
-
-            <div class="topics-grid">
-                <div class="topic-item">AI და ბიზნესი</div>
-                <div class="topic-item">AI და განათლება</div>
-                <div class="topic-item">AI და მარკეტინგი</div>
-                <div class="topic-item">AI და შემოქმედება</div>
-                <div class="topic-item">AI და ყოველდღიური ცხოვრება</div>
-                <div class="topic-item">AI და ფსიქოლოგია</div>
-                <div class="topic-item">ან ნებისმიერი კუთხე, რომელიც თქვენთვის მნიშვნელოვანია</div>
-            </div>
-
-            <p style="margin: 35px 0; font-size: 1.15em; line-height: 1.8; color: var(--text-gray);">
-                შეგიძლიათ ისაუბროთ როგორც საკუთარ გამოცდილებაზე, ასევე იდეებზე, მიგნებებზე, ან უბრალოდ გააზიაროთ თქვენი ხედვა — როგორი გავლენა აქვს ხელოვნურ ინტელექტს ჩვენს სამყაროზე და როგორ შეიძლება მისი გონივრული გამოყენება.
+            <h1 class="hero-title">AI WAVE 2025</h1>
+            
+            <h2 class="hero-subtitle">
+                ხელოვნური ინტელექტის მომავალი იწყება აქ
+            </h2>
+            
+            <p class="hero-description">
+                ერთმანეთს შევხვდებით 500+ AI ენთუზიასტი, ლიდერი და ვიზიონერი. 
+                განვიცდით უდიდესი გამოცდილება ხელოვნური ინტელექტის სამყაროში.
             </p>
 
-            <div class="speaker-section">
-                <h3>🎯 ვინ შეიძლება იყოს სპიკერი?</h3>
-                <p style="font-size: 1.15em; line-height: 1.8; color: var(--text-gray);">
-                    ეს მოწვევა განკუთვნილია მხოლოდ მოწვეული სტუმრებისთვის — ადამიანებისთვის, ვინც ჩვენი გუნდის მხრიდან შერჩეულნი არიან საინტერესო ხედვის, გამოცდილების ან უნიკალური პერსპექტივის გამო.
-                </p>
-                <p style="font-size: 1.15em; line-height: 1.8; color: var(--deep-dark-navy); font-weight: 600; margin-top: 18px;">
-                    თუ ეს გვერდი თქვენამდე მოვიდა, ეს ნიშნავს, რომ გვინდა, ჩვენმა აუდიტორიამ სწორედ თქვენ მოგისმინოთ.
-                </p>
+            <!-- Event Stats -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">მონაწილე</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">ექსპერტი სპიკერი</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7</span>
+                    <span class="stat-label">საათი ღონისძიება</span>
+                </div>
             </div>
 
-            <div class="requirements-section">
-                <h3>🤝 რას გთხოვთ?</h3>
-                <p style="margin-bottom: 25px; font-size: 1.15em; color: var(--text-gray);">თუ გსურთ მონაწილეობა, გთხოვთ:</p>
-                
-                <ul class="requirements-list">
-                    <li>📝 მოგვაწოდოთ თქვენი საუბრის სავარაუდო თემა (დროული შეთანხმებისთვის)</li>
-                    <li>🎤 მოსვლამდე მოგაწვდით კონკრეტულ განრიგს, ტექნიკურ დეტალებს და საჭიროებას თუ გაქვთ პრეზენტაციისთვის</li>
-                </ul>
-                
-                <div class="participation-button-container">
-                    <button class="participation-btn" onclick="toggleForm()">
-                        🎯 მონაწილეობის მიღება
-                    </button>
+            <!-- Event Details -->
+            <div class="event-details">
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <span class="detail-icon">🗓️</span>
+                        <span>27 სექტემბერი, 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">⏰</span>
+                        <span>12:00 - 19:00</span>
+                    </div>
                 </div>
-                
-                <!-- Simple Form (Initially Hidden) -->
-                <div class="registration-form" id="registrationForm" style="display: none;">
-                    <div class="form-container">
-                        <h3>🎤 მონაწილეობის რეგისტრაცია</h3>
-                        <p>გთხოვთ შეავსოთ ფორმა AI Wave 2025-ში მონაწილეობისთვის</p>
-                        
-                        <form id="participationForm">
-                            <div class="form-group">
-                                <label for="fullName">🙋‍♀️ სახელი და გვარი *</label>
-                                <input type="text" id="fullName" name="fullName" required placeholder="თქვენი სრული სახელი">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">📧 ელ. ფოსტა *</label>
-                                <input type="email" id="email" name="email" required placeholder="your@email.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">📱 ტელეფონი *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+995 XXX XX XX XX">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="topic">💭 თქვენი სავარაუდო თემა *</label>
-                                <textarea id="topic" name="topic" required placeholder="მოკლედ აღწერეთ, რაზე ისაუბრებთ AI-ის კუთხით (მაგ. AI და ბიზნესი, AI და განათლება, პირადი გამოცდილება და ა.შ.)"></textarea>
-                            </div>
-                            
-                            <div class="form-buttons">
-                                <button type="button" class="btn-cancel" onclick="toggleForm()">დახურვა</button>
-                                <button type="submit" class="btn-submit">📨 გაგზავნა</button>
-                            </div>
-                        </form>
+                <div class="detail-row">
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <span>თბილისი, ბეთლემის ქუჩა N10</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🎯</span>
+                        <span>უდიდესი AI სივრცე</span>
                     </div>
                 </div>
             </div>
 
-            <div class="location-section">
-                <h3>🧭 ლოკაცია</h3>
-                <div class="location-info">
-                    <p style="font-size: 1.15em; line-height: 1.8; color: var(--text-gray); margin-bottom: 18px;">
-                        AI Wave 2025 ჩატარდება თბილისში, ბეთლემის ქუჩაზე — ქალაქის ისტორიულ და ატმოსფერულ ნაწილში.
-                    </p>
-                    <p style="font-size: 1.15em; font-weight: 600; color: var(--deep-dark-navy); margin-bottom: 18px;">
-                        მისამართი: ბეთლემის ქ. 10
-                    </p>
-                    <p style="font-size: 1.1em; color: var(--text-gray);">
-                        ადგილზე იქნება ყველა საჭირო ტექნიკური რესურსი და სტუმართმოყვარე გარემو.
-                    </p>
-                </div>
+            <!-- Call to Action -->
+            <div class="cta-container">
+                <a href="#tickets" class="cta-button cta-primary">
+                    🎟️ ბილეთის შეძენა (მალე)
+                </a>
+                <a href="#speakers" class="cta-button cta-secondary">
+                    🎤 სპიკერად რეგისტრაცია
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="closing-section">
-            <h2>AI Wave 2025</h2>
-            <div class="closing-text">
-                <p>AI Wave 2025 არ არის უბრალოდ პრეზენტაციების სერია.</p>
-                <p>ეს არის შესაძლებლობა, გავაზიაროთ ხედვები მომავალზე, გავიცნოთ ერთმანეთი და ერთად ვისაუბროთ იმ თემაზე, რომელიც განსაზღვრავს ჩვენს მომავალს.</p>
+    <!-- Features Section -->
+    <section class="content-section">
+        <h2 class="section-title">რატომ AI WAVE 2025?</h2>
+        <p class="section-description">
+            ეს არ არის უბრალოდ კონფერენცია - ეს არის ხელოვნური ინტელექტის რევოლუციის დასაწყისი საქართველოში
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🚀</span>
+                <h3 class="feature-title">უდიდესი შესაძლებლობა</h3>
+                <p class="feature-description">
+                    500+ მონაწილე, ბიზნეს ლიდერები, ინვესტორები და ტექნოლოგიური ღიღანტები ერთ სივრცეში
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🌟</span>
+                <h3 class="feature-title">ექსკლუზიური გამოცდილება</h3>
+                <p class="feature-description">
+                    შუადღიდან საღამომდე 7 საათი AI-ს სამყაროში ჩაძირვა უძლიერეს სპიკერებთან ერთად
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🎯</span>
+                <h3 class="feature-title">პრემიუმ სივრცე</h3>
+                <p class="feature-description">
+                    უდიდესი კონფერენც-სივრცე, ყველა საჭირო ტექნიკური რესურსი და სტუმართმოყვარე გარემოს
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🤝</span>
+                <h3 class="feature-title">ნეთვორქინგი</h3>
+                <p class="feature-description">
+                    შესვენებები ეზოში, After Party და უნიკალური შესაძლებლობა დაუკავშირდე AI კომუნიტას
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🎤</span>
+                <h3 class="feature-title">ღია სპიკერ პლატფორმა</h3>
+                <p class="feature-description">
+                    არ იყო დახურული ღონისძიება - ნებისმიერ ექსპერტს შეუძლია გახდეს სპიკერი და გაუზიაროს ხედვა
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🏆</span>
+                <h3 class="feature-title">საქართველოს ისტორია</h3>
+                <p class="feature-description">
+                    იყავი ნაწილი საქართველოს უდიდესი AI კონფერენციისა და ჩაეწერე ქვეყნის ტექნოლოგიურ ისტორიაში
+                </p>
             </div>
         </div>
-
-        <div class="footer">
-            <p>AI Wave 2025 © ყველა უფლება დაცულია</p>
-        </div>
-    </div>
+    </section>
 
     <script>
-        // Neural Network Background
+        // Neural Network Animation
         function createNeuralNetwork() {
-            const neuralBg = document.getElementById('neural-bg');
-            const nodeCount = window.innerWidth > 768 ? 25 : 15;
-            
-            for (let i = 0; i < nodeCount; i++) {
-                const node = document.createElement('div');
-                node.className = 'node';
-                node.style.left = Math.random() * 100 + '%';
-                node.style.top = Math.random() * 100 + '%';
-                node.style.animationDelay = Math.random() * 4 + 's';
-                neuralBg.appendChild(node);
+            const container = document.getElementById('neural-network');
+            const numDots = 30;
+            const numLines = 20;
+
+            // Create neural dots
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'neural-dot';
+                dot.style.left = Math.random() * 100 + '%';
+                dot.style.top = Math.random() * 100 + '%';
+                dot.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(dot);
             }
-            
-            // Add AI-themed particles
-            createAIParticles();
-        }
-        
-        // Create additional AI particles
-        function createAIParticles() {
-            const neuralBg = document.getElementById('neural-bg');
-            const particles = ['⚡', '💡', '🔬', '🔍', '⚙️', '🌐'];
-            const particleCount = window.innerWidth > 768 ? 8 : 4;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.textContent = particles[Math.floor(Math.random() * particles.length)];
-                particle.style.position = 'absolute';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.fontSize = '1rem';
-                particle.style.opacity = '0.08';
-                particle.style.color = '#0FF0FC';
-                particle.style.textShadow = '0 0 10px rgba(15, 240, 252, 0.6)';
-                particle.style.animation = `pulse ${3 + Math.random() * 3}s infinite ease-in-out`;
-                particle.style.animationDelay = Math.random() * 2 + 's';
-                neuralBg.appendChild(particle);
+
+            // Create neural lines
+            for (let i = 0; i < numLines; i++) {
+                const line = document.createElement('div');
+                line.className = 'neural-line';
+                line.style.left = Math.random() * 100 + '%';
+                line.style.top = Math.random() * 100 + '%';
+                line.style.width = Math.random() * 200 + 50 + 'px';
+                line.style.transform = `rotate(${Math.random() * 360}deg)`;
+                line.style.animationDelay = Math.random() * 4 + 's';
+                container.appendChild(line);
             }
         }
 
-        // Topic items animation with enhanced mobile support
-        function initializeAnimations() {
-            const topics = document.querySelectorAll('.topic-item');
-            const isMobile = window.innerWidth <= 768;
-            
-            topics.forEach((topic, index) => {
-                topic.style.opacity = '0';
-                topic.style.transform = 'translateY(20px)';
-                const delay = isMobile ? index * 0.05 : index * 0.1;
-                topic.style.transition = `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`;
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
 
-            // Enhanced intersection observer
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createNeuralNetwork();
+            
+            // Add scroll animation to feature cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1177,101 +636,13 @@
                         entry.target.style.transform = 'translateY(0)';
                     }
                 });
-            }, {
-                threshold: isMobile ? 0.1 : 0.3,
-                rootMargin: isMobile ? '50px' : '100px'
-            });
+            }, observerOptions);
 
-            topics.forEach(topic => observer.observe(topic));
-        }
-
-        // Responsive handling
-        function handleResize() {
-            const neuralBg = document.getElementById('neural-bg');
-            if (neuralBg) {
-                neuralBg.innerHTML = '';
-                createNeuralNetwork();
-            }
-        }
-
-        // Make functions globally available
-        window.toggleForm = function() {
-            const form = document.getElementById('registrationForm');
-            if (form) {
-                if (form.style.display === 'none') {
-                    form.style.display = 'block';
-                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                } else {
-                    form.style.display = 'none';
-                }
-            }
-        };
-        
-        window.scrollToForm = function() {
-            const form = document.getElementById('registrationForm');
-            if (form) {
-                // Show form if hidden
-                form.style.display = 'block';
-                // Scroll to form with smooth animation
-                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        };
-
-
-        // Touch event optimization for mobile
-        if ('ontouchstart' in window) {
-            document.addEventListener('touchstart', function() {}, {passive: true});
-        }
-        
-        
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            createNeuralNetwork();
-            initializeAnimations();
-            
-            // Form submission handling
-            const form = document.getElementById('participationForm');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form data
-                    const formData = {
-                        fullName: document.getElementById('fullName').value,
-                        email: document.getElementById('email').value,
-                        phone: document.getElementById('phone').value,
-                        topic: document.getElementById('topic').value
-                    };
-                    
-                    // Basic validation
-                    if (!formData.fullName || !formData.email || !formData.phone || !formData.topic) {
-                        alert('გთხოვთ შეავსოთ ყველა სავალდებულო ველი (*)');
-                        return;
-                    }
-                    
-                    // Email validation
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(formData.email)) {
-                        alert('გთხოვთ შეიყვანოთ სწორი ელ. ფოსტის მისამართი');
-                        return;
-                    }
-                    
-                    // Show success message
-                    alert('🎉 წარმატებით გაიგზავნა!\n\nმადლობა AI Wave 2025-ში მონაწილეობისთვის! ჩვენ დაგიკავშირდებით უახლოეს დღეებში დამატებითი დეტალებისთვის.');
-                    
-                    // Reset form and hide it
-                    this.reset();
-                    document.getElementById('registrationForm').style.display = 'none';
-                    
-                    // Here you would normally send the data to a server
-                    console.log('Form submitted:', formData);
-                });
-            }
-            
-            let resizeTimeout;
-            window.addEventListener('resize', function() {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(handleResize, 250);
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
             });
         });
     </script>
