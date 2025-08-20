@@ -82,6 +82,75 @@
             0%, 100% { opacity: 0.08; transform: scale(1); }
             50% { opacity: 0.15; transform: scale(1.1); }
         }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* AI Conference Photos */
+        .conference-photos {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .photo-item {
+            flex: 1;
+            min-width: 280px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+        }
+        
+        .photo-item::before {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            z-index: 2;
+        }
+        
+        .ai-photo-1 {
+            background: linear-gradient(135deg, #0A0F2C, #00FFFF, #1FC7FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .ai-photo-2 {
+            background: linear-gradient(135deg, #6D28D9, #00FFFF, #FFD700);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .ai-photo-3 {
+            background: linear-gradient(135deg, #FF6B35, #00FFFF, #1FC7FF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
 
         @keyframes backgroundPulse {
             0% { opacity: 0.3; transform: scale(1); }
@@ -534,6 +603,16 @@
                 width: 100%;
                 max-width: 250px;
             }
+            
+            .conference-photos {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .photo-item {
+                height: 180px;
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -550,19 +629,32 @@
         
         <div class="hero-content">
             <div class="conference-badge">
-                🇬🇪 საქართველოში პირველი დიდი AI კონფერენცია
+                🇬🇪 საქართველოს ისტორიაში პირველი დიდი AI კონფერენცია
+            </div>
+            
+            <div class="historic-badge" style="background: linear-gradient(45deg, #FFD700, #FFA500); color: #0A0F2C; padding: 10px 25px; border-radius: 25px; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; animation: glow 3s ease-in-out infinite alternate; display: inline-block;">
+                🏆 ისტორიული მომენტი - იყავი ნაწილი!
             </div>
             
             <h1 class="hero-title">AI WAVE 2025</h1>
             
-            <h2 class="hero-subtitle">
-                იჩქარე! მხოლოდ რამდენიმე ბილეთი დარჩა
+            <h2 class="hero-subtitle" style="color: #FFD700; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 25px;">
+                🔥 500 ადგილი - სწრაფად მთავრდება!
             </h2>
             
-            <p class="hero-description">
-                <strong>20+ საუკეთესო სპიკერი</strong> შენთვის შერჩეული, ხელოვნური ინტელექტის შესახებ საკუთარ გამოცდილებებს და ხედვებს გაგიზიარებს.<br>
-                <strong>500 ადგილიანი უდიდესი სივრცე</strong> - ყველაზე მაგარი ღონისძიების ადგილი თბილისში!
-            </p>
+            <div class="urgency-text" style="background: rgba(255, 0, 0, 0.8); color: white; padding: 15px 30px; border-radius: 50px; font-weight: 700; font-size: 1.2rem; margin-bottom: 25px; animation: pulse 2s infinite; display: inline-block;">
+                ⚡ მხოლოდ რამდენიმე კვირა დარჩა!
+            </div>
+            
+            <div class="speaker-appeal" style="background: rgba(0, 255, 255, 0.15); border: 2px solid #00FFFF; border-radius: 15px; padding: 25px; margin: 25px 0; backdrop-filter: blur(10px);">
+                <h3 style="color: #00FFFF; font-size: 1.4rem; margin-bottom: 15px;">🎤 სპიკერებისთვის უნიკალური შესაძლებლობა:</h3>
+                <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.95); line-height: 1.6;">გახდი ნაწილი საქართველოს AI ისტორიისა! 500 ადამიანის წინაშე გაამხილე შენი ხედვა და გამოცდილება. ეს არის შენი შანსი გახდე ცნობილი AI სფეროში საქართველოში!</p>
+            </div>
+            
+            <div class="attendee-appeal" style="background: rgba(255, 215, 0, 0.15); border: 2px solid #FFD700; border-radius: 15px; padding: 25px; margin: 25px 0; backdrop-filter: blur(10px);">
+                <h3 style="color: #FFD700; font-size: 1.4rem; margin-bottom: 15px;">🎟️ მონაწილეებისთვის ექსკლუზიური გამოცდილება:</h3>
+                <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.95); line-height: 1.6;"><strong>20+ ტოპ სპიკერი, 7 საათი AI სამყაროში, ნეთვორქინგი საუკეთესოებთან!</strong> ეს იქნება ღონისძიება, რომელზეც ყველა ისაუბრებს. მხოლოდ 500 ბილეთი!</p>
+            </div>
 
             <!-- Event Stats -->
             <div class="stats-container">
@@ -610,7 +702,7 @@
                     ⚡ ბილეთის შეძენა - იჩქარე!
                 </a>
                 <a href="#speakers" class="cta-button cta-secondary">
-                    🎤 სპიკერად რეგისტრაცია
+                    🎤 გახდი ისტორიის ნაწილი - სპიკერი
                 </a>
             </div>
         </div>
@@ -620,9 +712,23 @@
     <section class="content-section">
         <h2 class="section-title">რატომ ეს კონფერენცია განსხვავებულია?</h2>
         <p class="section-description">
-            პირველად საქართველოში ასეთი მასშტაბის AI კონფერენცია - 500 ადგილი, 20+ ტოპ სპიკერი, უნიკალური ლოკაცია
+            <strong style="color: #FFD700; font-size: 1.5rem;">🇬🇪 საქართველოს ტექნოლოგიური ისტორიის უმნიშვნელოვანესი მომენტი!</strong><br>
+            პირველად ასეთი მასშტაბის AI კონფერენცია - 500 ელიტარული ადგილი, 20+ მსოფლიო კლასის სპიკერი
         </p>
 
+        <!-- AI Conference Photos -->
+        <div class="conference-photos">
+            <div class="photo-item ai-photo-1" data-title="500+ AI ენთუზიასტი ერთ სივრცეში">
+                🧠📊🚀
+            </div>
+            <div class="photo-item ai-photo-2" data-title="მსოფლიო კლასის სპიკერები">
+                🎤🌟🏆
+            </div>
+            <div class="photo-item ai-photo-3" data-title="უდიდესი AI ღონისძიება">
+                🏢⚡🔮
+            </div>
+        </div>
+        
         <div class="features-grid">
             <div class="feature-card">
                 <span class="feature-icon">🏢</span>
