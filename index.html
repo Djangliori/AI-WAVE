@@ -44,7 +44,7 @@
             overflow: hidden;
         }
 
-        /* Animated Background */
+        /* Animated Background with AI Elements */
         .hero::before {
             content: '';
             position: absolute;
@@ -53,10 +53,34 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 128, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 60%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 128, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
             animation: backgroundPulse 8s ease-in-out infinite alternate;
+        }
+        
+        /* AI Brain Visual Effect */
+        .hero::after {
+            content: '🧠🤖💡🔮⚡🌟💎🎯';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 4rem;
+            opacity: 0.08;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 2;
+            pointer-events: none;
+            animation: brainPulse 10s ease-in-out infinite;
+        }
+        
+        @keyframes brainPulse {
+            0%, 100% { opacity: 0.08; transform: scale(1); }
+            50% { opacity: 0.15; transform: scale(1.1); }
         }
 
         @keyframes backgroundPulse {
@@ -71,7 +95,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.1;
+            opacity: 0.15;
             z-index: 1;
         }
 
@@ -516,7 +540,7 @@
 <body>
     <!-- Announcement Banner -->
     <div class="announcement">
-        🎟️ ბილეთების გაყიდვა მალე დაიწყება! • 📍 თბილისი, ბეთლემის ქუჩა N10 • 🗓️ 27 სექტემბერი, 2025
+        ⚡ მხოლოდ 500 ბილეთი! • 🚀 იჩქარე და მოასწარი! • 📍 ბეთლემის ქუჩა N10 • 🗓️ 27 სექტემბერი
     </div>
 
     <!-- Hero Section -->
@@ -526,18 +550,18 @@
         
         <div class="hero-content">
             <div class="conference-badge">
-                საქართველოს უდიდესი AI კონფერენცია
+                🇬🇪 საქართველოში პირველი დიდი AI კონფერენცია
             </div>
             
             <h1 class="hero-title">AI WAVE 2025</h1>
             
             <h2 class="hero-subtitle">
-                ხელოვნური ინტელექტის მომავალი იწყება აქ
+                იჩქარე! მხოლოდ რამდენიმე ბილეთი დარჩა
             </h2>
             
             <p class="hero-description">
-                ერთმანეთს შევხვდებით 500+ AI ენთუზიასტი, ლიდერი და ვიზიონერი. 
-                განვიცდით უდიდესი გამოცდილება ხელოვნური ინტელექტის სამყაროში.
+                <strong>20+ საუკეთესო სპიკერი</strong> შენთვის შერჩეული, ხელოვნური ინტელექტის შესახებ საკუთარ გამოცდილებებს და ხედვებს გაგიზიარებს.<br>
+                <strong>500 ადგილიანი უდიდესი სივრცე</strong> - ყველაზე მაგარი ღონისძიების ადგილი თბილისში!
             </p>
 
             <!-- Event Stats -->
@@ -547,8 +571,8 @@
                     <span class="stat-label">მონაწილე</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">ექსპერტი სპიკერი</span>
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">საუკეთესო სპიკერი</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">7</span>
@@ -574,8 +598,8 @@
                         <span>თბილისი, ბეთლემის ქუჩა N10</span>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-icon">🎯</span>
-                        <span>უდიდესი AI სივრცე</span>
+                        <span class="detail-icon">🏢</span>
+                        <span>პრემიუმ ლოკაცია ბეთლემზე</span>
                     </div>
                 </div>
             </div>
@@ -583,7 +607,7 @@
             <!-- Call to Action -->
             <div class="cta-container">
                 <a href="#tickets" class="cta-button cta-primary">
-                    🎟️ ბილეთის შეძენა (მალე)
+                    ⚡ ბილეთის შეძენა - იჩქარე!
                 </a>
                 <a href="#speakers" class="cta-button cta-secondary">
                     🎤 სპიკერად რეგისტრაცია
@@ -594,33 +618,33 @@
 
     <!-- Features Section -->
     <section class="content-section">
-        <h2 class="section-title">რატომ AI WAVE 2025?</h2>
+        <h2 class="section-title">რატომ ეს კონფერენცია განსხვავებულია?</h2>
         <p class="section-description">
-            ეს არ არის უბრალოდ კონფერენცია - ეს არის ხელოვნური ინტელექტის რევოლუციის დასაწყისი საქართველოში
+            პირველად საქართველოში ასეთი მასშტაბის AI კონფერენცია - 500 ადგილი, 20+ ტოპ სპიკერი, უნიკალური ლოკაცია
         </p>
 
         <div class="features-grid">
             <div class="feature-card">
-                <span class="feature-icon">🚀</span>
-                <h3 class="feature-title">უდიდესი შესაძლებლობა</h3>
+                <span class="feature-icon">🏢</span>
+                <h3 class="feature-title">უდიდესი სივრცე თბილისში</h3>
                 <p class="feature-description">
-                    500+ მონაწილე, ბიზნეს ლიდერები, ინვესტორები და ტექნოლოგიური ღიღანტები ერთ სივრცეში
+                    500 ადგილიანი პრემიუმ კონფერენც-ჰოლი, ყველაზე მაგარი ღონისძიების ლოკაცია ბეთლემის ქუჩაზე
                 </p>
             </div>
             
             <div class="feature-card">
-                <span class="feature-icon">🌟</span>
-                <h3 class="feature-title">ექსკლუზიური გამოცდილება</h3>
+                <span class="feature-icon">⭐</span>
+                <h3 class="feature-title">20+ შერჩეული სპიკერი</h3>
                 <p class="feature-description">
-                    შუადღიდან საღამომდე 7 საათი AI-ს სამყაროში ჩაძირვა უძლიერეს სპიკერებთან ერთად
+                    საქართველოს და მსოფლიოს AI ექსპერტები გაგიზიარებენ რეალურ გამოცდილებებს და ინსაიტებს
                 </p>
             </div>
             
             <div class="feature-card">
                 <span class="feature-icon">🎯</span>
-                <h3 class="feature-title">პრემიუმ სივრცე</h3>
+                <h3 class="feature-title">პირველი ასეთი ღონისძიება</h3>
                 <p class="feature-description">
-                    უდიდესი კონფერენც-სივრცე, ყველა საჭირო ტექნიკური რესურსი და სტუმართმოყვარე გარემოს
+                    საქართველოში პირველად ასეთი მასშტაბის AI კონფერენცია - ჩაეწერე ისტორიაში!
                 </p>
             </div>
             
@@ -633,18 +657,18 @@
             </div>
             
             <div class="feature-card">
-                <span class="feature-icon">🎤</span>
-                <h3 class="feature-title">ღია სპიკერ პლატფორმა</h3>
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">შეზღუდული რაოდენობა</h3>
                 <p class="feature-description">
-                    არ იყო დახურული ღონისძიება - ნებისმიერ ექსპერტს შეუძლია გახდეს სპიკერი და გაუზიაროს ხედვა
+                    მხოლოდ 500 ბილეთი - იჩქარე და მოასწარი ამ უნიკალურ ღონისძიებას!
                 </p>
             </div>
             
             <div class="feature-card">
-                <span class="feature-icon">🏆</span>
-                <h3 class="feature-title">საქართველოს ისტორია</h3>
+                <span class="feature-icon">🎊</span>
+                <h3 class="feature-title">7 საათი AI სამყაროში</h3>
                 <p class="feature-description">
-                    იყავი ნაწილი საქართველოს უდიდესი AI კონფერენციისა და ჩაეწერე ქვეყნის ტექნოლოგიურ ისტორიაში
+                    12:00-19:00 - სრული ჩაძირვა ხელოვნური ინტელექტის სამყაროში, After Party-ის ჩათვლით
                 </p>
             </div>
         </div>
